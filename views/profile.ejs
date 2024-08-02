@@ -1,0 +1,58 @@
+
+
+<%- include("header") %>
+            <!-- MAIN CONTENT-->
+            <div class="main-content">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-5" style="display: block;margin: 0 auto;">
+                                <!-- DATA TABLE -->
+                                <h3 class="title-5 m-b-35" style="text-align: center;">Your Profile</h3>
+                                
+                                
+                                <form action="" method="post" enctype="multipart/form-data">
+                                    <div class="table-responsive ">
+                                        <table class="table m-b-35">
+                                            <tbody>
+                                                <img  src="<%= locals.user.admin_image %>"  alt="" height="100"  class="m-b-35" style="display: block;margin: 0 auto;">
+                                                   
+                                                <tr class="tr-shadow" ></tr>
+                                                    <td style="font-weight: bold;">Name</td>
+                                                    <td><%= locals.user.name %></td>
+                                                </tr>
+                                                <tr class="tr-shadow">
+                                                    <td style="font-weight: bold;">Email</td>
+                                                    <td>
+                                                        <span><%= locals.user.email %></span>
+                                                    </td>
+                                                </tr>
+                                                <tr class="tr-shadow">
+                                                    <td style="font-weight: bold;">Description</td>
+                                                    <td class="desc"><%= locals.user.description %></td>
+                                                </tr>
+                                                    <tr class="tr-shadow">
+                                                        <td style="font-weight: bold;">Gender</td>
+                                                        <td><%= locals.user.gender %></td>
+                                                    </tr>
+                                                    <tr class="tr-shadow">
+                                                        <td style="font-weight: bold;">Hobby</td>
+                                                        <td><%= locals.user.hobby %></td>
+                                                    </tr>
+                                                   <tr class="tr-shadow">
+                                                    <td style="font-weight: bold;">City</td>
+                                                    <td><%= locals.user.city %></td>
+                                                   </tr>
+                                                    
+                                                   
+                                                </tbody>
+                                            </table>
+                                            <a href="/admin/updatedata/<%= locals.user._id %>" class="alert alert-primary" style="margin: 0 auto;display: block;text-align: center;">Edit Profile</a>
+                                    </div>
+                                </form>
+                                <!-- END DATA TABLE -->
+                            </div>
+                        </div>
+                      
+                        <%- include("footer") %>
+                        
